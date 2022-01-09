@@ -11,8 +11,6 @@ import (
 	"golang.org/x/crypto/salsa20/salsa"
 
 	"crypto/rc4"
-
-	"github.com/Yawning/chacha20"
 )
 
 type IV struct {
