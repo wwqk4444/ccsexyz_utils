@@ -1,4 +1,4 @@
-module github/zhengying/ccsexyz_utils
+module github.com/zhengying/ccsexyz_utils
 
 go 1.17
 
