@@ -4,12 +4,12 @@ import (
 	"crypto/aes"
 	"crypto/cipher"
 	"crypto/md5"
+	"crypto/chacha20"
 	"encoding/binary"
 	"fmt"
 	"sync"
 
 	"golang.org/x/crypto/salsa20/salsa"
-	"golang.org/x/crypto/chacha20"
 	"crypto/rc4"
 )
 
