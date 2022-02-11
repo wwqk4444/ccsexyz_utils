@@ -10,6 +10,7 @@ import (
 
 	"golang.org/x/crypto/salsa20/salsa"
 	"github.com/aead/chacha20"
+	"github.com/aead/chacha20/chacha"
 	"crypto/rc4"
 )
 
