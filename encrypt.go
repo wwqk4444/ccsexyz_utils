@@ -9,7 +9,7 @@ import (
 	"sync"
 
 	"golang.org/x/crypto/salsa20/salsa"
-
+	"golang.org/x/crypto/chacha20/"
 	"crypto/rc4"
 )
 
