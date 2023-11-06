@@ -12,7 +12,7 @@ import (
 
 	"crypto/rc4"
 
-	"github.com/Yawning/chacha20"
+	"gitlab.com/yawning/chacha20.git"
 )
 
 type IV struct {
