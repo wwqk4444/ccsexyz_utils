@@ -132,7 +132,7 @@ func NewAESCFBEncrypter(key, iv []byte) (enc Encrypter, err error) {
 }
 
 func NewChaCha20Encrypter(key, iv []byte) (enc Encrypter, err error) {
-	stream, err := chacha20.NewCipher(key, iv)
+	stream, err := chacha20.Cipher(key, iv)
 	if err != nil {
 		return
 	}
@@ -185,7 +185,7 @@ func NewAESCFBDecrypter(key, iv []byte) (dec Decrypter, err error) {
 }
 
 func NewChaCha20Decrypter(key, iv []byte) (dec Decrypter, err error) {
-	stream, err := chacha20.NewCipher(key, iv)
+	stream, err := chacha20.Cipher(key, iv)
 	if err != nil {
 		return
 	}
@@ -313,7 +313,7 @@ type chacha20BlockCrypt struct {
 }
 
 func NewChaCha20BlockCrypt(key []byte) (*chacha20BlockCrypt, error) {
-	_, err := chacha20.NewCipher(key, initialVector[:8])
+	_, err := chacha20.Cipher(key, initialVector[:8])
 	if err != nil {
 		return nil, err
 	}
@@ -321,7 +321,7 @@ func NewChaCha20BlockCrypt(key []byte) (*chacha20BlockCrypt, error) {
 	c := new(chacha20BlockCrypt)
 
 	c.cipherPool.New = func() interface{} {
-		ciph, _ := chacha20.NewCipher(key, initialVector[:8])
+		ciph, _ := chacha20.Cipher(key, initialVector[:8])
 		return ciph
 	}
 
